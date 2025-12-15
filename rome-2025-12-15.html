@@ -54,16 +54,16 @@
 
 <header>
   <h1>Rome Travel Guide</h1>
-  <p>Discover the Eternal City's rich history, architecture, and delicious food.</p>
+  <p>Discover the Eternal City's rich history, architecture, and culture.</p>
 </header>
 
 <div class="container">
 
   <h2>Gallery</h2>
   <div class="images">
-    <img src="https://source.unsplash.com/600x400/?Rome,city" />
-    <img src="https://source.unsplash.com/600x400/?Rome,landmark" />
-    <img src="https://source.unsplash.com/600x400/?Rome,travel" />
+    <img src="https://source.unsplash.com/600x400/?Colosseum%20Rome&sig=1" />
+    <img src="https://source.unsplash.com/600x400/?Vatican%20City%20Rome&sig=2" />
+    <img src="https://source.unsplash.com/600x400/?Trevi%20Fountain%20Rome&sig=3" />
   </div>
 
   <h2>Top Attractions</h2>
@@ -71,13 +71,13 @@
     
     <li><b>Colosseum</b> – This ancient amphitheater is one of Rome's most iconic landmarks and a testament to the city's rich history.</li>
   
-    <li><b>Vatican City</b> – The center of the Catholic Church, Vatican City is home to numerous iconic landmarks, including St. Peter's Basilica and the Sistine Chapel.</li>
+    <li><b>Vatican City</b> – The Vatican is home to numerous iconic landmarks, including St. Peter's Basilica and the Sistine Chapel, featuring Michelangelo's famous ceiling.</li>
   
-    <li><b>Roman Forum</b> – Once the heart of ancient Rome, the Roman Forum features a collection of ancient ruins, including temples, basilicas, and markets.</li>
+    <li><b>Trevi Fountain</b> – This beautiful baroque fountain is a must-see for its stunning architecture and picturesque surroundings.</li>
   
-    <li><b>Pantheon</b> – This ancient temple is one of the best-preserved ancient buildings in Rome and a masterpiece of Roman architecture.</li>
+    <li><b>Spanish Steps</b> – This grand staircase is one of Rome's most famous landmarks and offers stunning views of the city.</li>
   
-    <li><b>Trevi Fountain</b> – This beautiful baroque fountain is a popular spot for tourists and locals alike, and legend has it that if you throw a coin into the fountain, you'll one day return to Rome.</li>
+    <li><b>Pantheon</b> – This ancient temple is one of Rome's best-preserved ancient buildings and features an impressive dome designed by Michelangelo.</li>
   
   </ul>
 
@@ -89,32 +89,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-  const map = L.map('map').setView([41.8904, 12.4924], 13);
+  const map = L.map('map').setView([41.8904, 12.4922], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
   
-    L.marker([41.8904, 12.4924])
+    L.marker([41.8904, 12.4922])
       .addTo(map)
       .bindPopup("Colosseum");
   
-    L.marker([41.9028, 12.4539])
+    L.marker([41.9027, 12.4533])
       .addTo(map)
       .bindPopup("Vatican City");
   
-    L.marker([41.8903, 12.4855])
-      .addTo(map)
-      .bindPopup("Roman Forum");
-  
-    L.marker([41.8941, 12.4765])
-      .addTo(map)
-      .bindPopup("Pantheon");
-  
-    L.marker([41.8942, 12.4783])
+    L.marker([41.8966, 12.4837])
       .addTo(map)
       .bindPopup("Trevi Fountain");
+  
+    L.marker([41.9053, 12.4851])
+      .addTo(map)
+      .bindPopup("Spanish Steps");
+  
+    L.marker([41.8941, 12.4763])
+      .addTo(map)
+      .bindPopup("Pantheon");
   
 </script>
 
