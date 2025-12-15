@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rome Travel Guide</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    .container {
+      padding: 24px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+    }
+    .images {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .images img {
+      width: 33%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    #map {
+      height: 400px;
+      margin-top: 24px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Rome Travel Guide</h1>
+  <p>Discover the Eternal City's rich history, architecture, and delicious food in this comprehensive travel guide.</p>
+</header>
+
+<div class="container">
+
+  <h2>Gallery</h2>
+  <div class="images">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" />
+  </div>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    
+    <li><b>Colosseum</b> – This ancient amphitheater is one of Rome's most iconic landmarks and a testament to the city's rich history.</li>
+  
+    <li><b>Vatican City</b> – The Vatican is home to numerous iconic landmarks, including St. Peter's Basilica, the Sistine Chapel, and the Vatican Museums.</li>
+  
+    <li><b>Trevi Fountain</b> – This beautiful baroque fountain is a must-see attraction in Rome, where visitors can make a wish by tossing a coin into the water.</li>
+  
+    <li><b>Roman Forum</b> – Once the heart of ancient Rome, the Roman Forum is a vast archaeological site filled with ancient ruins and historic landmarks.</li>
+  
+    <li><b>Pantheon</b> – This magnificently preserved ancient temple is one of Rome's most impressive architectural achievements.</li>
+  
+    <li><b>Castel Sant'Angelo</b> – This former fortress and mausoleum offers stunning views of the city and is a great spot to take in the sights.</li>
+  
+  </ul>
+
+  <h2>Map</h2>
+  <div id="map"></div>
+
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  const map = L.map('map').setView([41.89005, 12.49234], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  
+    L.marker([41.89005, 12.49234])
+      .addTo(map)
+      .bindPopup("Colosseum");
+  
+    L.marker([41.90274, 12.45345])
+      .addTo(map)
+      .bindPopup("Vatican City");
+  
+    L.marker([41.89455, 12.47837])
+      .addTo(map)
+      .bindPopup("Trevi Fountain");
+  
+    L.marker([41.89155, 12.48543])
+      .addTo(map)
+      .bindPopup("Roman Forum");
+  
+    L.marker([41.89414, 12.47692])
+      .addTo(map)
+      .bindPopup("Pantheon");
+  
+    L.marker([41.89605, 12.47643])
+      .addTo(map)
+      .bindPopup("Castel Sant'Angelo");
+  
+</script>
+
+</body>
+</html>
