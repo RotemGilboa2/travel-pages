@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>New York Travel Guide</title>
+  <meta charset="UTF-8" />
+  <title>The Ultimate New York Travel Guide</title>
 
-  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -36,8 +35,9 @@
     }
     .images img {
       width: 33%;
-      border-radius: 10px;
+      height: 220px;
       object-fit: cover;
+      border-radius: 10px;
     }
     ul {
       line-height: 1.8;
@@ -53,33 +53,31 @@
 <body>
 
 <header>
-  <h1>New York Travel Guide</h1>
-  <p>The city that never sleeps, New York is a melting pot of cultures, food, and entertainment.</p>
+  <h1>The Ultimate New York Travel Guide</h1>
+  <p>Experience the city that never sleeps, from iconic landmarks to world-class museums and diverse neighborhoods.</p>
 </header>
 
 <div class="container">
 
   <h2>Gallery</h2>
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://source.unsplash.com/600x400/?New%20York,city" />
+    <img src="https://source.unsplash.com/600x400/?New%20York,landmark" />
+    <img src="https://source.unsplash.com/600x400/?New%20York,travel" />
   </div>
 
   <h2>Top Attractions</h2>
   <ul>
     
-    <li><b>Statue of Liberty</b> – A symbol of freedom and democracy, the Statue of Liberty is a must-visit attraction in New York.</li>
+    <li><b>Statue of Liberty</b> – A symbol of freedom and democracy, this iconic statue is a must-visit attraction in New York Harbor.</li>
   
-    <li><b>Central Park</b> – An 843-acre green oasis in the middle of Manhattan, Central Park offers a peaceful escape from the hustle and bustle of the city.</li>
+    <li><b>Central Park</b> – An 843-acre green oasis in the middle of Manhattan, offering a peaceful escape from the hustle and bustle of the city.</li>
   
-    <li><b>The Metropolitan Museum of Art</b> – One of the world's greatest art museums, the Met features a vast collection of art and artifacts from around the world.</li>
+    <li><b>The Metropolitan Museum of Art</b> – One of the world's largest and most renowned museums, featuring a vast collection of art and artifacts from around the world.</li>
   
-    <li><b>Empire State Building</b> – An iconic skyscraper and one of the tallest buildings in the world, the Empire State Building offers breathtaking views of the city.</li>
+    <li><b>Times Square</b> – The heart of New York's entertainment district, known for its bright lights, giant billboards, and lively street performers.</li>
   
-    <li><b>Times Square</b> – The heart of New York's entertainment district, Times Square is known for its bright lights, giant billboards, and lively street performers.</li>
-  
-    <li><b>9/11 Memorial &amp; Museum</b> – A poignant tribute to the victims of the 9/11 attacks, the 9/11 Memorial &amp; Museum features two large reflecting pools surrounded by the names of those who were killed.</li>
+    <li><b>9/11 Memorial &amp; Museum</b> – A poignant tribute to the victims of the 9/11 attacks, featuring two massive reflecting pools surrounded by the names of those who were killed.</li>
   
   </ul>
 
@@ -88,18 +86,17 @@
 
 </div>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-  const map = L.map('map').setView([40.6936, -74.0463], 13);
+  const map = L.map('map').setView([40.6933, -74.0464], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
   
-    L.marker([40.6936, -74.0463])
+    L.marker([40.6933, -74.0464])
       .addTo(map)
       .bindPopup("Statue of Liberty");
   
@@ -107,21 +104,17 @@
       .addTo(map)
       .bindPopup("Central Park");
   
-    L.marker([40.7791, -73.9632])
+    L.marker([40.7797, -73.9632])
       .addTo(map)
       .bindPopup("The Metropolitan Museum of Art");
-  
-    L.marker([40.7484, -73.9857])
-      .addTo(map)
-      .bindPopup("Empire State Building");
   
     L.marker([40.7589, -73.9851])
       .addTo(map)
       .bindPopup("Times Square");
   
-    L.marker([40.7051, -74.0111])
+    L.marker([40.7056, -74.0123])
       .addTo(map)
-      .bindPopup("9/11 Memorial &amp; Museum");
+      .bindPopup("9/11 Memorial & Museum");
   
 </script>
 
