@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paris Travel Guide</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    .container {
+      padding: 24px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+    }
+    .images {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .images img {
+      width: 33%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    #map {
+      height: 400px;
+      margin-top: 24px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Paris Travel Guide</h1>
+  <p>Discover the City of Light, famous for its art, fashion, and romance.</p>
+</header>
+
+<div class="container">
+
+  <h2>Gallery</h2>
+  <div class="images">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" />
+  </div>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    
+    <li><b>The Eiffel Tower</b> – The iconic symbol of Paris and one of the most recognizable landmarks in the world.</li>
+  
+    <li><b>The Louvre Museum</b> – One of the world's largest and most famous museums, housing an impressive collection of art and artifacts.</li>
+  
+    <li><b>Notre-Dame Cathedral</b> – A beautiful and historic Gothic church that has been a Parisian landmark for over 850 years.</li>
+  
+    <li><b>Arc de Triomphe</b> – A monumental arch that honors the soldiers who fought and died for France, offering stunning views of the city.</li>
+  
+    <li><b>Montmartre</b> – A charming and historic neighborhood known for its bohemian vibe, street artists, and stunning views of the city.</li>
+  
+  </ul>
+
+  <h2>Map</h2>
+  <div id="map"></div>
+
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  const map = L.map('map').setView([48.8583, 2.2945], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  
+    L.marker([48.8583, 2.2945])
+      .addTo(map)
+      .bindPopup("The Eiffel Tower");
+  
+    L.marker([48.8607, 2.2943])
+      .addTo(map)
+      .bindPopup("The Louvre Museum");
+  
+    L.marker([48.8566, 2.2945])
+      .addTo(map)
+      .bindPopup("Notre-Dame Cathedral");
+  
+    L.marker([48.8731, 2.2957])
+      .addTo(map)
+      .bindPopup("Arc de Triomphe");
+  
+    L.marker([48.8935, 2.3244])
+      .addTo(map)
+      .bindPopup("Montmartre");
+  
+</script>
+
+</body>
+</html>
