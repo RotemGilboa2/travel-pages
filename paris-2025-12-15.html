@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Paris Travel Guide</title>
 
-  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -36,8 +35,9 @@
     }
     .images img {
       width: 33%;
-      border-radius: 10px;
+      height: 220px;
       object-fit: cover;
+      border-radius: 10px;
     }
     ul {
       line-height: 1.8;
@@ -54,30 +54,30 @@
 
 <header>
   <h1>Paris Travel Guide</h1>
-  <p>Discover the City of Light, famous for its art, fashion, and romance.</p>
+  <p>Discover the City of Light, famous for its stunning architecture, art museums, fashion, and romantic atmosphere.</p>
 </header>
 
 <div class="container">
 
   <h2>Gallery</h2>
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://source.unsplash.com/600x400/?Paris,city" />
+    <img src="https://source.unsplash.com/600x400/?Paris,landmark" />
+    <img src="https://source.unsplash.com/600x400/?Paris,travel" />
   </div>
 
   <h2>Top Attractions</h2>
   <ul>
     
-    <li><b>The Eiffel Tower</b> – The iconic symbol of Paris and one of the most recognizable landmarks in the world.</li>
+    <li><b>The Eiffel Tower</b> – Built for the 1889 World's Fair, this iconic iron lattice tower is a symbol of Paris and offers breathtaking views of the city.</li>
   
-    <li><b>The Louvre Museum</b> – One of the world's largest and most famous museums, housing an impressive collection of art and artifacts.</li>
+    <li><b>The Louvre Museum</b> – One of the world's largest and most famous museums, housing an impressive collection of art and artifacts from ancient civilizations to the 19th century.</li>
   
-    <li><b>Notre-Dame Cathedral</b> – A beautiful and historic Gothic church that has been a Parisian landmark for over 850 years.</li>
+    <li><b>Notre-Dame Cathedral</b> – A beautiful and historic Gothic church that was built in the 12th century and has been a place of worship and pilgrimage for centuries.</li>
   
-    <li><b>Arc de Triomphe</b> – A monumental arch that honors the soldiers who fought and died for France, offering stunning views of the city.</li>
+    <li><b>Arc de Triomphe</b> – A monumental arch that honors the soldiers who fought and died for France, offering stunning views of the city from its rooftop.</li>
   
-    <li><b>Montmartre</b> – A charming and historic neighborhood known for its bohemian vibe, street artists, and stunning views of the city.</li>
+    <li><b>Montmartre</b> – A charming and historic neighborhood known for its bohemian vibe, street artists, and stunning views of the city from the top of the hill.</li>
   
   </ul>
 
@@ -86,34 +86,33 @@
 
 </div>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-  const map = L.map('map').setView([48.8583, 2.2945], 13);
+  const map = L.map('map').setView([48.8584, 2.2945], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
   
-    L.marker([48.8583, 2.2945])
+    L.marker([48.8584, 2.2945])
       .addTo(map)
       .bindPopup("The Eiffel Tower");
   
-    L.marker([48.8607, 2.2943])
+    L.marker([48.8603, 2.2943])
       .addTo(map)
       .bindPopup("The Louvre Museum");
   
-    L.marker([48.8566, 2.2945])
+    L.marker([48.8567, 2.2945])
       .addTo(map)
       .bindPopup("Notre-Dame Cathedral");
   
-    L.marker([48.8731, 2.2957])
+    L.marker([48.8731, 2.295])
       .addTo(map)
       .bindPopup("Arc de Triomphe");
   
-    L.marker([48.8935, 2.3244])
+    L.marker([48.8762, 2.3344])
       .addTo(map)
       .bindPopup("Montmartre");
   
