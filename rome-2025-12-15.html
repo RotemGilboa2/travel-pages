@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Rome Travel Guide</title>
 
-  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -36,8 +35,9 @@
     }
     .images img {
       width: 33%;
-      border-radius: 10px;
+      height: 220px;
       object-fit: cover;
+      border-radius: 10px;
     }
     ul {
       line-height: 1.8;
@@ -54,16 +54,16 @@
 
 <header>
   <h1>Rome Travel Guide</h1>
-  <p>Discover the Eternal City's rich history, architecture, and delicious food in this comprehensive travel guide.</p>
+  <p>Discover the Eternal City's rich history, architecture, and delicious food.</p>
 </header>
 
 <div class="container">
 
   <h2>Gallery</h2>
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80" />
-    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" />
+    <img src="https://source.unsplash.com/600x400/?Rome,city" />
+    <img src="https://source.unsplash.com/600x400/?Rome,landmark" />
+    <img src="https://source.unsplash.com/600x400/?Rome,travel" />
   </div>
 
   <h2>Top Attractions</h2>
@@ -71,15 +71,13 @@
     
     <li><b>Colosseum</b> – This ancient amphitheater is one of Rome's most iconic landmarks and a testament to the city's rich history.</li>
   
-    <li><b>Vatican City</b> – The Vatican is home to numerous iconic landmarks, including St. Peter's Basilica, the Sistine Chapel, and the Vatican Museums.</li>
+    <li><b>Vatican City</b> – The center of the Catholic Church, Vatican City is home to numerous iconic landmarks, including St. Peter's Basilica and the Sistine Chapel.</li>
   
-    <li><b>Trevi Fountain</b> – This beautiful baroque fountain is a must-see attraction in Rome, where visitors can make a wish by tossing a coin into the water.</li>
+    <li><b>Roman Forum</b> – Once the heart of ancient Rome, the Roman Forum features a collection of ancient ruins, including temples, basilicas, and markets.</li>
   
-    <li><b>Roman Forum</b> – Once the heart of ancient Rome, the Roman Forum is a vast archaeological site filled with ancient ruins and historic landmarks.</li>
+    <li><b>Pantheon</b> – This ancient temple is one of the best-preserved ancient buildings in Rome and a masterpiece of Roman architecture.</li>
   
-    <li><b>Pantheon</b> – This magnificently preserved ancient temple is one of Rome's most impressive architectural achievements.</li>
-  
-    <li><b>Castel Sant'Angelo</b> – This former fortress and mausoleum offers stunning views of the city and is a great spot to take in the sights.</li>
+    <li><b>Trevi Fountain</b> – This beautiful baroque fountain is a popular spot for tourists and locals alike, and legend has it that if you throw a coin into the fountain, you'll one day return to Rome.</li>
   
   </ul>
 
@@ -88,40 +86,35 @@
 
 </div>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-  const map = L.map('map').setView([41.89005, 12.49234], 13);
+  const map = L.map('map').setView([41.8904, 12.4924], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
   
-    L.marker([41.89005, 12.49234])
+    L.marker([41.8904, 12.4924])
       .addTo(map)
       .bindPopup("Colosseum");
   
-    L.marker([41.90274, 12.45345])
+    L.marker([41.9028, 12.4539])
       .addTo(map)
       .bindPopup("Vatican City");
   
-    L.marker([41.89455, 12.47837])
-      .addTo(map)
-      .bindPopup("Trevi Fountain");
-  
-    L.marker([41.89155, 12.48543])
+    L.marker([41.8903, 12.4855])
       .addTo(map)
       .bindPopup("Roman Forum");
   
-    L.marker([41.89414, 12.47692])
+    L.marker([41.8941, 12.4765])
       .addTo(map)
       .bindPopup("Pantheon");
   
-    L.marker([41.89605, 12.47643])
+    L.marker([41.8942, 12.4783])
       .addTo(map)
-      .bindPopup("Castel Sant'Angelo");
+      .bindPopup("Trevi Fountain");
   
 </script>
 
